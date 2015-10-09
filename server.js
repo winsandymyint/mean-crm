@@ -50,5 +50,5 @@ app.get('*', function(req, res) {
 
 // START THE SERVER
 // ====================================
-app.listen(8000);
+app.listen(8080);
 console.log('Magic happens on port ' + config.port);

@@ -20,16 +20,16 @@ module.exports = function(app, express) {
 			if (!user) {
 				var sampleUser = new User();
 
-				sampleUser.name = 'Chris';  
-				sampleUser.username = 'chris'; 
-				sampleUser.password = 'supersecret';
+				sampleUser.name = 'Ye Min Htut';  
+				sampleUser.username = 'bean'; 
+				sampleUser.password = 'vampire';
 
 				sampleUser.save();
 			} else {
 				console.log(user);
 
 				// if there is a chris, update his password
-				user.password = 'supersecret';
+				user.password = 'vampire';
 				user.save();
 			}
 

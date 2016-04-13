@@ -1,5 +1,5 @@
 {
-  "name": "mean-crm",
+  "name": "slicknet",
   "main": "server.js",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
@@ -8,6 +8,16 @@
     "express": "^4.13.3",
     "jsonwebtoken": "^5.4.0",
     "mongoose": "^4.1.9",
-    "morgan": "^1.6.1"
-  }  
+    "morgan": "^1.6.1",
+    "mysql": "^2.0.0"
+  },  
+  "repository": {
+    "type": "git",
+    "url": "http://winsandymyint.com/slicknet"
+  },
+  "keywords": [
+    "slicknet"
+  ],
+  "author": "winsandymyint",
+  "license": "MIT"
 }

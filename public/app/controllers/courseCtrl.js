@@ -1,6 +1,6 @@
 angular.module('courseCtrl', ['courseService'])
 
-.controller('userController', function(User) {
+.controller('courseController', function(User) {
 
 	var vm = this;
 
@@ -40,7 +40,7 @@ angular.module('courseCtrl', ['courseService'])
 })
 
 // controller applied to user creation page
-.controller('userCreateController', function(User) {
+.controller('courseCreateController', function(User) {
 	
 	var vm = this;
 
@@ -66,7 +66,7 @@ angular.module('courseCtrl', ['courseService'])
 })
 
 // controller applied to user edit page
-.controller('userEditController', function($routeParams, User) {
+.controller('courseEditController', function($routeParams, User) {
 
 	var vm = this;
 

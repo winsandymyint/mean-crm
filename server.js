@@ -3,12 +3,13 @@
 
 // CALL THE PACKAGES --------------------
 var express     = require('express')		// call express
-	,app        = express(); 				// define our app using express
-	// ,bodyParser = require('body-parser'); 	// get body-parser
-	,morgan     = require('morgan'); 		// used to see requests
-	,mongoose   = require('mongoose');
-	,config 	= require('./config');
-	,path 	    = require('path');
+	,app        = express()				// define our app using express
+	,bodyParser = require('body-parser') 	// get body-parser
+	,morgan     = require('morgan') 		// used to see requests
+	,mongoose   = require('mongoose')
+	,config 	= require('./config')
+	,path 	    = require('path')
+	,mysql 	    = require('mysql')
 
 // APP CONFIGURATION ==================
 // ====================================

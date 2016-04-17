@@ -52,6 +52,28 @@ angular.module('app.routes', ['ngRoute'])
 			controller: 'userEditController',
 			controllerAs: 'user'
 		});
+		
+		// show all courses
+		.when('/courses', {
+			templateUrl: 'app/views/pages/courses/all.html',
+			controller: 'courseController',
+			controllerAs: 'course'
+		})
+
+		// form to create a new courses
+		// same view as edit page
+		.when('/courses/create', {
+			templateUrl: 'app/views/pages/courses/single.html',
+			controller: 'courseCreateController',
+			controllerAs: 'course'
+		})
+
+		// page to edit a courses
+		.when('/courses/:course_id', {
+			templateUrl: 'app/views/pages/courses/single.html',
+			controller: 'courseEditController',
+			controllerAs: 'course'
+		});
 
 	$locationProvider.html5Mode(true);
 

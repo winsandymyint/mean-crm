@@ -137,12 +137,19 @@ module.exports = function(app, express) {
 
 		// create a user (accessed at POST http://localhost:8080/users)
 		.post(function(req, res) {
-			
+			console.log(res.body)
 			var user = new User();		// create a new instance of the User model
 			user.name = req.body.name;  // set the users name (comes from the request)
 			user.username = req.body.username;  // set the users username (comes from the request)
 			user.password = req.body.password;  // set the users password (comes from the request)
-			user.level = req.body.level;
+			user.avator = req.body.avator;
+			user.location = req.body.location;
+			user.gender = req.body.gender;
+			user.birthday = req.body.birthday;
+			user.aboutme = req.body.aboutme;
+			user.websitelink = req.body.websitelink;
+			user.country = req.body.country;
+			user.type = req.body.type;
 
 			user.save(function(err) {
 				if (err) {
@@ -194,7 +201,15 @@ module.exports = function(app, express) {
 				if (req.body.name) user.name = req.body.name;
 				if (req.body.username) user.username = req.body.username;
 				if (req.body.password) user.password = req.body.password;
-				if (req.body.level) user.level = req.body.level;
+				console.log(req.body)
+				// if (req.body.user.avator) = req.body.avator;
+				// if (req.body.user.location) = req.body.location;
+				// if (req.body.user.gender) = req.body.gender;
+				// if (req.body.user.birthday) = req.body.birthday;
+				// if (req.body.user.aboutme) = req.body.aboutme;
+				// if (req.body.user.websitelink) = req.body.websitelink;
+				// if (req.body.user.country) = req.body.country;
+				// if (req.body.user.type) = req.body.type;
 				// save the user
 				user.save(function(err) {
 					if (err) res.send(err);

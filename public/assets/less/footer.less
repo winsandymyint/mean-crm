@@ -1,0 +1,23 @@
+.footer {
+    padding: 60px 0;
+    background-color: @dark-color;
+    color: @dark-muted-color;
+    
+    a   {
+        color: @dark-muted-color;
+        text-decoration: none;
+        transition: color 0.3s;
+        
+        &:hover, &:focus    {
+            color: #fff;
+        }
+    }
+    
+    hr  {
+        border-top-color: lighten(@dark-color,7%);
+    }
+    
+    .btn    {
+        background-color: @dark-color2;    
+    }
+}

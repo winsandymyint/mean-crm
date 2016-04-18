@@ -1,0 +1,47 @@
+.tp-caption.WebProduct-Title, .WebProduct-Title {
+    font-family: @main-font-family;
+}
+
+.tp-caption.WebProduct-Title
+, .WebProduct-Title {
+    &.font-header    {
+        font-family: @header-font-family;
+    }
+}
+
+.tp-caption.NotGeneric-Title, .NotGeneric-Title {
+    font-family: @header-font-family;
+}
+
+.tp-caption.NotGeneric-SubTitle, .NotGeneric-SubTitle {
+    font-family: @main-font-family;
+}
+
+.tp-caption.WebProduct-Content, .WebProduct-Content {
+    font-family: @main-font-family;
+}
+
+.tp-caption.Newspaper-Title-Centered, .Newspaper-Title-Centered {
+    font-family: inherit;
+}
+
+.tp-caption.Newspaper-Subtitle, .Newspaper-Subtitle {
+    font-family: @header-font-family;
+    color: fade(@main-color,70%);
+}
+
+.tp-bannertimer {
+    background-color: fade(@main-color,50%);    
+}
+
+.tp-caption.Newspaper-Button, .Newspaper-Button {
+    background-color: @main-color;
+    color: #fff !important;
+    transition: background-color 0.2s, color 0.2s;
+    -webkit-transition: background-color 0.2s, color 0.2s;
+    
+    &:hover {
+        background-color: #fff !important;
+        color: @main-text-color !important;
+    }
+}

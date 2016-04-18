@@ -1,0 +1,1786 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="utf-8">
+    <title>Quantum Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Prettify -->
+    <link href="css/prettify.css" rel="stylesheet">
+
+    <!-- Icon Set -->
+    <link href="../css/icon.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Docs Css -->
+    <link href="../css/app.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+
+  </head>
+
+	<body>
+    
+    <!-- wrapper -->
+		<div class="wrapper doc-wrap">
+      <header class="navbar navbar-static-top docs-nav" id="top" role="banner">
+        <div class="container">
+          <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="../" class="navbar-brand">Quantum</a>
+          </div>
+          <nav id="bs-navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#gettingStartSection">Getting Start</a></li>
+              <li><a href="#htmlStructureSection">Html Structure</a></li>
+              <li><a href="#componentSection">Component</a></li>
+              <li><a href="#changeLogSection">Change Log</a></li>
+              <li><a href="#creditSection">Credit</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <div class="docs-header">
+        <div class="container">
+          <h1>Documentation</h1>
+          <div class="row">
+            <div class="col-md-10">
+              <p>
+                Below is all the information you will need to setup and use your theme. We have taken extra time and effort to make these docs as detailed as possible.If you have any questions that are beyond the scope of this help file, please feel free to contact us at <span class="">endless.themes@gmail.com</span>. We will do our best to help you where we can.
+              </p>
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.docs-header -->
+
+      <div class="container">
+        <div class="page-header h2" id="gettingStartSection"><div class="step-circle">1</div>Getting started</div>
+        <p>
+          Before we start, let's take a look on the folder structure of the theme. All theme files are placed in the <strong class="text-highlight">frontend</strong> folder. This folder consists of 8 more folders for different types of theme assets:
+        </p>
+
+        <div class="highlight m-t-20">
+          <pre class="prettyprint linenums"><code>admin/
+├── bootstrap/ //Bootstrap Core
+├── css/ 
+├── fonts/
+├── images/
+├── js/
+├── less/
+├── revolution/ // All assets for revolution slider
+└── html/ //All html files are located inside this folder</code></pre>
+        </div>
+
+        <p class="m-t-20">These are 2 main files that you have to add to your page.</p>
+        <div class="highlight m-t-10">
+          <pre class="prettyprint linenums"><code>&lt;!-- Core css --&gt;
+&lt;link href="css/app.css" rel="stylesheet"&gt;
+<br/>
+&lt;!-- Core js --&gt;
+&lt;script src="js/app.js"&gt;&lt;/script&gt;</code></pre>
+        </div>
+
+        <div class="page-header h2" id="htmlStructureSection"><div class="step-circle">2</div>HTML Structure</div>
+        The main HTML structure of the template consists of 3 main containers containing all page elements:
+      
+        <ul class="p-l-20 m-t-5">
+          <li><a href="#exampleHeader">Header</a></li>
+          <li><a href="#exampleBody">Body</a></li>
+          <li><a href="#exampleFooter">Footer</a></li>
+        </ul>
+
+        <h4 class="no-m-b text-upper m-t-30"><b>Header</b></h4>
+        
+        <div class="example-wrapper clearfix m-t-20">  
+          <img src="images/header.png" alt="" class="img-responsive">
+        </div>
+
+        <div class="highlight m-t-20">
+          <pre class="prettyprint linenums"><code>&lt;header class="top-nav"&gt;
+  &lt;div class="container"&gt;
+    <br/>
+    &lt;!-- Navbar Header For Logo And Brand --&gt;  
+    &lt;div class="navbar-header"&gt;
+      &lt;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topNavCollapse" aria-expanded="false"&gt;
+        &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;/button&gt;
+
+      &lt;a class="navbar-brand font-header" href="index.html"&gt;&lt;span class="text-main">QUAN&lt;/span&gt;TUM&lt;/a&gt;
+    &lt;/div&gt;
+    <br/>
+    &lt;!-- Collect The Nav Links, Forms, And Other Content For Toggling --&gt;
+    &lt;div class="collapse navbar-collapse" id="topNavCollapse"&gt;
+      &lt;ul class="nav navbar-nav navbar-right"&gt;
+        &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#">Features&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#">Works&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="dropdown"&gt;
+          &lt;a href="#" data-toggle="dropdown" class="dropdown-toggle"&gt;Blog&lt;/a&gt;
+          &lt;ul class="dropdown-menu"&gt;
+            &lt;li&gt;&lt;a href="#">Blog List&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#">Blog Mansonry&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#">Blog Masonry&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Pages&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+          </code></pre>
+        </div>
+
+        <h4 class="no-m-b text-upper m-t-30"><b>Body</b></h4>
+        <p class="m-t-20">This is an example of the body section. All elements and contents will be placed in the <code>.container</code>.</p>
+
+        <div class="highlight m-t-20">
+          <pre class="prettyprint linenums"><code>
+&lt;div class="section"&gt;
+  &lt;div class="container"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+          </code></pre>
+        </div>
+
+        <p class="m-t-20">Adding some heading and content.</p>
+
+        <div class="example-wrapper clearfix m-t-20">  
+          <img src="images/body1.png" alt="" class="img-responsive">
+        </div>
+
+        <div class="highlight m-t-20">
+          <pre class="prettyprint linenums"><code>
+&lt;div class="section"&gt;
+  &lt;div class="container"&gt;
+    &lt;h2 class="font-header no-m-t text-dark section-heading text-center">This is the first section&lt;/h2&gt;
+    &lt;p class="m-t-20 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet nulla eget ipsum vulputate dictum.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+          </code></pre>
+        </div>
+
+        <p class="m-t-20">You can apply background color to the section by adding these class <code>bg-light</code>, <code>bg-gray</code>, <code>bg-dark</code> and <code>bg-main</code>.</p>
+
+        <div class="example-wrapper clearfix m-t-20">
+          <img src="images/body2.png" alt="" class="img-responsive center-block">
+        </div>
+
+        <div class="example-wrapper clearfix m-t-20">
+          <img src="images/body3.png" alt="" class="img-responsive center-block">
+        </div>
+
+        <div class="example-wrapper clearfix m-t-20">
+          <img src="images/body4.png" alt="" class="img-responsive center-block">
+        </div>
+
+        <p class="m-t-20">This background color will be changed if you changed the value of the less variable <code>@main-color</code>. it's located under less folder</p>
+
+        <div class="example-wrapper clearfix m-t-20">
+          <img src="images/body5.png" alt="" class="img-responsive center-block">
+        </div>
+
+        <p class="m-t-20">You can add multiple section in the same way.</p>
+
+        <div class="highlight m-t-20">
+          <pre class="prettyprint linenums"><code>&lt;!-- First Section --&gt;
+&lt;div class="section"&gt;
+  &lt;div class="container"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+<br/>
+&lt;!-- Second Section --&gt;
+&lt;div class="section"&gt;
+  &lt;div class="container"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+          </code></pre>
+        </div>
+
+        <h4 class="no-m-b text-upper m-t-30"><b>Footer</b></h4>
+        <p class="m-t-20">Using class <code>.footer</code> for applying css to footer.</p>
+
+        <div class="example-wrapper clearfix m-t-20">
+          <img src="images/footer.png" alt="" class="img-responsive center-block">
+        </div>
+
+        <div class="highlight m-t-20">
+          <pre class="prettyprint linenums"><code>&lt;footer class="footer"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="col-sm-3 text-center"&gt;
+        &lt;h4 class="text-upper text-white">&lt;b>Quan&lt;/b&gt;tum&lt;/h4&gt;
+      &lt;/div&gt;
+      &lt;div class="col-sm-9 text-center-xs m-t-30-xs"&gt;
+        &lt;div class="row"&gt;
+          &lt;div class="col-sm-3"&gt;
+            &lt;div class="font-header text-upper">Products&lt;/div&gt;
+            &lt;ul class="list-unstyled m-t-5 line-24"&gt;
+              &lt;li&gt;&lt;a href="#">Overview&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#">Features&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#">Pricing&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#">Support&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+
+          &lt;div class="col-sm-3 m-t-15-xs"&gt;
+            &lt;div class="font-header text-upper">Resources&lt;/div&gt;
+            &lt;ul class="list-unstyled m-t-5 line-24"&gt;
+              &lt;li&gt;&lt;a href="#"&gt;Platform&lt;/a>&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#"&gt;Plugin&lt;/a>&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#"&gt;Service&lt;/a>&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+
+          &lt;div class="col-sm-3 m-t-15-xs"&gt;
+            &lt;div class="font-header text-upper">Customers&lt;/div&gt;
+            &lt;ul class="list-unstyled m-t-5 line-24"&gt;
+              &lt;li&gt;&lt;a href="#">Sales&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#">Promotion&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+
+          &lt;div class="col-sm-3 m-t-15-xs"&gt;
+            &lt;div class="font-header text-upper">Company&lt;/div&gt;
+            &lt;ul class="list-unstyled m-t-5 line-24"&gt;
+              &lt;li&gt;&lt;a href="#">About Us&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#">Contact&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    <br/>
+    &lt;hr&gt;
+    <br/>
+    &lt;div class="text-center"&gt;
+      &lt;a class="text-white" href="#"&gt;&lt;i class="icon-facebook">&lt;/i&gt;&lt;/a&gt;
+      &lt;a class="text-white m-l-5" href="#"&gt;&lt;i class="icon-twitter m-d-1"&gt;&lt;/i&gt;&lt;/a&gt;
+      &lt;a class="text-white m-l-5" href="#"&gt;&lt;i class="icon-linkedin2"&gt;&lt;/i&gt;&lt;/a&gt;
+
+      &lt;div class="m-t-15"&gt;
+        &copy; 2015. &lt;b class="text-white">Quantum&lt;/b&gt; by &lt;b class="text-white"&gt;Endless Theme&lt;/b&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+          </code></pre>
+        </div>
+
+        <div class="page-header h2" id="componentSection"><div class="step-circle">3</div>Component</div>
+        
+        <p>Most of components in Quantum admin use the same elements and classes of Bootstrap with addition of a few elements and classes to add some customization. If you are not familiar with Bootstrap, check this link <a href="http://getbootstrap.com/">Twitter's Bootstrap</a>.</p>
+
+        <h4 class="no-m-b text-upper m-t-30"><b>Revolution Slider</b></h4>
+        <p class="m-t-20">This template is using <a href="http://revolution.themepunch.com/" target="_blank">Revolution Slide</a> for creating slide show, see example <a href="../index.html" target="_blank">here</a>. Its is located under <code>/revolution</code> folder. check their documentation for more information.</p>
+
+
+        <h4 class="no-m-b text-upper m-t-30"><b>Page Header</b></h4>
+        <p class="m-t-20">Top banner for displaying page title. see example <a href="../portfolio_grid.html" target="_blank">here</a></p>
+
+        <div class="example-wrapper clearfix m-t-20">
+          <img src="images/page_header.png" alt="" class="img-responsive center-block">
+        </div>
+
+        <div class="highlight m-t-20">
+          <pre class="prettyprint linenums"><code>&lt;div class="page-title bg4">
+  &lt;div class="container">
+    &lt;h1 class="font-header text-white">Check Our Awesome Work&lt;/h1>
+    &lt;p class="text-white font-16 line-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet nulla eget ipsum vulputate dictum.&lt;/p>
+    &lt;div class="m-t-30">
+      &lt;button class="btn btn-main btn-lg">Get Started Today&lt;/button>
+    &lt;/div>
+  &lt;/div><!-- /.container -->
+&lt;/div></code></pre>
+        </div>
+
+        <h4 class="no-m-b text-upper m-t-30"><b>Feature</b></h4>
+        <p class="m-t-20">This is a component to list your product's features.</p>
+
+        <div class="example-wrapper clearfix m-t-20">
+          <img src="images/feature.png" alt="" class="img-responsive center-block">
+        </div>
+
+        <div class="highlight m-t-20">
+          <pre class="prettyprint linenums"><code>&lt;div class="feature-wrap"&gt;
+  &lt;div class="feature-icon"&gt;
+    &lt;i class="icon-stats-dots">&lt;/i&gt;
+  &lt;/div&gt;
+
+  &lt;h5 class="font-header text-upper text-dark"&gt;&lt;b&gt;Feature Header&lt;/b&gt;&lt;/h5&gt;
+  &lt;p class="line-24">Feature detail.&lt;/p&gt;
+&lt;/div&gt;
+          </code></pre>
+        </div>
+
+        <p class="m-t-20">Using Bootstrap grid to create columns.</p>
+
+        <div class="highlight m-t-20">
+          <pre class="prettyprint linenums"><code>&lt;div class="row"&gt;
+  &lt;div class="col-sm-6 col-md-4"&gt;
+    &lt;div class="feature-wrap"&gt;
+      &lt;div class="feature-icon"&gt;
+        &lt;i class="icon-stats-dots">&lt;/i&gt;
+      &lt;/div&gt;
+
+      &lt;h5 class="font-header text-upper text-dark"&gt;&lt;b&gt;Feature Header&lt;/b&gt;&lt;/h5&gt;
+      &lt;p class="line-24">Feature detail.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="col-sm-6 col-md-4"&gt;
+    &lt;div class="feature-wrap"&gt;
+      &lt;div class="feature-icon"&gt;
+        &lt;i class="icon-stats-dots">&lt;/i&gt;
+      &lt;/div&gt;
+
+      &lt;h5 class="font-header text-upper text-dark"&gt;&lt;b&gt;Feature Header&lt;/b&gt;&lt;/h5&gt;
+      &lt;p class="line-24">Feature detail.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="col-sm-6 col-md-4"&gt;
+    &lt;div class="feature-wrap"&gt;
+      &lt;div class="feature-icon"&gt;
+        &lt;i class="icon-stats-dots">&lt;/i&gt;
+      &lt;/div&gt;
+
+      &lt;h5 class="font-header text-upper text-dark"&gt;&lt;b&gt;Feature Header&lt;/b&gt;&lt;/h5&gt;
+      &lt;p class="line-24">Feature detail.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+          </code></pre>
+        </div>
+
+        <h4 class="no-m-b text-upper m-t-30"><b>Service</b></h4>
+        <p class="m-t-20">Same as feature item, Using bootstrap grid for creating columns to display service item.</p>
+
+        <div class="example-wrapper clearfix m-t-20">
+          <img src="images/service.png" alt="" class="img-responsive center-block">
+        </div>
+
+        <div class="highlight m-t-20">
+          <pre class="prettyprint linenums"><code>&lt;div class="row service-group-list"&gt;
+  &lt;div class="col-sm-6 col-md-4 service-list-item"&gt;
+    &lt;div class="item-inner"&gt;
+      &lt;i class="icon-quill h1 text-muted"&gt;&lt;/i&gt;
+      &lt;h5 class="font-header text-dark text-upper"&gt;Website Design&lt;/h5&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-sm-6 col-md-4 service-list-item"&gt;
+    &lt;div class="item-inner"&gt;
+      &lt;i class="icon-file-picture h1 text-muted"&gt;&lt;/i&gt;
+      &lt;h5 class="font-header text-dark text-upper"&gt;Graphic&lt;/h5&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="col-sm-6 col-md-4 service-list-item"&gt;
+    &lt;div class="item-inner"&gt;
+      &lt;i class="icon-mobile2 h1 text-muted"&gt;&lt;/i&gt;
+      &lt;h5 class="font-header text-dark text-upper">Mobile App&lt;/h5&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+          </code></pre>
+        </div>
+
+        <h4 class="no-m-b text-upper m-t-30"><b>Portfolio</b></h4>
+        <p class="m-t-20">Quantum uses <a href="http://isotope.metafizzy.co/">isotope</a> plugin for creating masonry layout and awesome filtering. For more details regarding the plugin please check their documentation.</p>
+
+        <div class="example-wrapper clearfix m-t-20">
+          <img src="images/portfolio1.png" alt="" class="img-responsive center-block">
+        </div>
+
+        <div class="highlight m-t-20">
+          <pre class="prettyprint linenums"><code>&lt;!-- Item Filter --&gt;
+&lt;div class="item-filter text-center m-t-20 hover-link-dots"&gt;
+  &lt;ul class="list-unstyled font-header font-12 clearfix"&gt;
+    &lt;li class="active"&gt;&lt;a href="#" data-filter="*" data-toggle="tab"&gt;All&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" data-filter=".webdesign" data-toggle="tab"&gt;Web Design&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" data-filter=".graphic" data-toggle="tab"&gt;Graphic&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" data-filter=".photography" data-toggle="tab"&gt;Photography&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" data-filter=".marketing" data-toggle="tab"&gt;Marketing&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+<br/>
+&lt;!--  Portfolio Items --&gt;
+&lt;div class="portfolio-grid m-t-30 clearfix"&gt;
+  &lt;div class="portfolio-item"&gt;
+    &lt;a href="#" class="portfolio-inner"&gt;
+      &lt;img src="img/p1.jpg" alt="" class="img-responsive"&gt;
+      &lt;div class="portfolio-overlay"&gt;
+        &lt;div class="content-group"&gt;
+          &lt;i class="icon-search h1">&lt;/i&gt;
+          &lt;h4 class="font-header text-upper no-m-b m-t-30">Portfolio Name&lt;/h4&gt;
+          &lt;i class="font-12 m-t-5">Graphic&lt;/i&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="portfolio-item"&gt;
+    ...
+  &lt;/div&gt;
+  &lt;div class="portfolio-item"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+          </code></pre>
+        </div>
+
+        <div class="highlight m-t-20">
+          <pre class="prettyprint linenums"><code>&lt;!-- jQuery for activate isotope plugin --&gt;
+var portfolioGroup = $('.portfolio-grid').isotope({
+  itemSelector: '.portfolio-item',
+  layoutMode: 'fitRows',
+  transitionDuration: '0.8s'
+});
+          </code></pre>
+        </div>
+
+        <h4 class="no-m-b text-upper m-t-30"><b>Pricing Plan</b></h4>
+        <p class="m-t-20">There are 3 color of the pricing plan, adding class <code>.pricing-main</code>, <code>.pricing-gray</code> and <code>.pricing-dark</code> to change the background color</p>
+
+        <div class="example-wrapper clearfix m-t-20">
+          <img src="images/pricing.png" alt="" class="img-responsive center-block">
+        </div>
+
+        <div class="highlight m-t-20">
+          <pre class="prettyprint linenums"><code>&lt;div class="pricing-item pricing-gray"&gt;
+  &lt;div class="pricing-heading font-header text-white"&gt;
+    Standard
+    &lt;h2&gt;$49.99&lt;span class="font-12"&gt;/mo&lt;/span&gt;&lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;div class="pricing-body"&gt;
+    &lt;ul class="pricing-service list-unstyled"&gt;
+      &lt;li&gt;Amount of space 10 GB&lt;/li&gt;
+      &lt;li&gt;Bandwidth per month 150 GB&lt;/li&gt;
+      &lt;li&gt;5 Domains&lt;/li&gt;
+      &lt;li&gt;10 Email Addresses&lt;/li&gt;
+      &lt;li&gt;24/7 Unlimited Support&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class="text-center m-t-30"&gt;
+      &lt;button class="btn btn-gray btn-lg btn-flat"&gt;Choose Plan&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+          </code></pre>
+        </div>
+
+        <h4 class="no-m-b text-upper m-t-30"><b>Client Reviews</b></h4>
+        <p class="m-t-20">You need a <a href="http://owlgraphic.com/owlcarousel/">owl carousel</a> plugin to create an animation for client reviews. For more details regarding the plugin please check their documentation.</p>
+
+        <div class="example-wrapper clearfix m-t-20">
+          <img src="images/review.png" alt="" class="img-responsive center-block">
+        </div>
+
+        <div class="highlight m-t-20">
+          <pre class="prettyprint linenums"><code>&lt;div class="review-group owl-carousel owl-theme"&gt;
+  &lt;div class="review-item"&gt;
+    &lt;img src="img/profile1.jpg" alt="" class="img-circle review-author m-t-20"&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="col-sm-6 col-sm-offset-3"&gt;
+        &lt;div class="review-bubble m-t-30"&gt;
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet nulla eget ipsum vulputate dictum. Suspendisse potenti. Quisque in dapibus est. Nulla accumsan quis ipsum eu dignissim.
+        &lt;/div&gt;
+      &lt;/div&gt;    
+    &lt;/div&gt;
+
+    &lt;div class="m-t-30 text-white"&gt;
+      &lt;b class="block"&gt;Larry Mccabe&lt;/b&gt;
+      &lt;i class="font-12"&gt;CEO and Founder&lt;/i&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  <br/>
+  &lt;div class="review-item"&gt;
+    ...
+  &lt;/div&gt;
+  <br/>
+  &lt;div class="review-item"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+
+          </code></pre>
+        </div>
+
+        <div class="highlight m-t-20">
+          <pre class="prettyprint linenums"><code>&lt;!-- jQuery for activate the review carousel --&gt;
+  var owl = $(".review-group");
+
+  owl.owlCarousel({
+    navigation : false,
+    singleItem : true,
+    autoPlay: 5000,
+  });
+          </code></pre>
+        </div>
+
+        <h4 class="no-m-b text-upper m-t-30"><b>Blog</b></h4>
+
+        <div class="example-wrapper clearfix m-t-20">
+          <img src="images/blog.png" alt="" class="img-responsive center-block">
+        </div>
+
+        <div class="highlight m-t-20">
+          <pre class="prettyprint linenums"><code>&lt;div class="blog-home-wrap"&gt;
+  &lt;div class="blog-img hover-element"&gt;
+    &lt;img src="img/b1.jpg" alt="" class="img-responsive"&gt;
+    &lt;!-- For hover effect --&gt;
+    &lt;div class="hover-overlay"&gt;
+      &lt;div class="hover-action"&gt;
+        &lt;button type="button" class="btn btn-main btn-lg btn-rounded btn-icon"&gt;&lt;i class="icon-zoom-in"&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;button type="button" class="btn btn-dark btn-lg btn-rounded btn-icon m-l-5"&gt;&lt;i class="icon-redo2"&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="font-header m-t-30 h4">Start building your own application.&lt;/div&gt;
+    &lt;p class="line-24 m-t-20"&gt;
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+          </code></pre>
+        </div>
+
+        <h4 class="no-m-b text-upper m-t-30"><b>Animation</b></h4>
+        <p class="m-t-20">Adding class <code>waypoint-animated-element</code> and <code>animated</code> to the element that you want to display an animation when scrolling pass its section and also add the animation name in <code>data-animation</code> attribute.</p>
+
+        <p>Quantum use animation style from <a href="https://daneden.github.io/animate.css/">animate css</a> and use <a href="http://imakewebthings.com/waypoints/">waypoint</a> for detected the scrolled position.</p>
+
+        <div class="highlight m-t-20">
+          <pre class="prettyprint linenums"><code>&lt;div class="feature-wrap waypoint-animated-element animated" data-animation="fadeInLeft"&gt;
+  &lt;div class="feature-icon"&gt;
+    &lt;i class="icon-stats-dots"&gt;&lt;/i&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <h4 class="m-t-30 text-upper"><b>Checkbox</b></h4>   
+        <p>There is custom style with multiple colors for checkbox in this template. you can apply this style to your checkbox if you don't like the default one.</p>
+        <div class="example-wrapper clearfix m-t-20">
+          <div class="checkbox no-m font-12">
+            <label>
+              <input type="checkbox"/>
+              Default Checkbox
+            </label>
+          </div>
+        </div>
+
+        <pre class="prettyprint linenums m-t-10"><code>&lt;div class="checkbox"&gt;
+  &lt;label&gt;
+    &lt;input type="checkbox"/&gt;
+    Default Checkbox
+  &lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+
+        <div class="example-wrapper clearfix m-t-30">
+          <div class="checkbox no-m-t">
+            <div class="custom-checkbox font-12">
+              <input type="checkbox" name="chk1" id="chk1" />
+              <label for="chk1">Custom Checkbox 1</label>
+            </div>
+          </div>
+
+          <div class="checkbox disabled">
+            <div class="custom-checkbox font-12">
+              <input type="checkbox" name="chk2" id="chk2" disabled/>
+              <label for="chk2">Disabled Checkbox</label>
+            </div>
+          </div>
+
+          <div class="checkbox no-m-b">
+            <div class="custom-checkbox font-12 no-animation">
+              <input type="checkbox" name="chk3" id="chk3" />
+              <label for="chk3">No Animation</label>
+            </div>
+          </div>
+        </div>
+
+        <pre class="prettyprint linenums m-t-10"><code>&lt;div class="checkbox"&gt;
+  &lt;div class="custom-checkbox"&gt;
+    &lt;input type="checkbox" name="chk1" id="chk1" /&gt;
+    &lt;label for="chk1">Custom Checkbox 1&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+<br/>
+&lt;div class="checkbox disabled"&gt;
+  &lt;div class="custom-checkbox font-12"&gt;
+    &lt;input type="checkbox" name="chk2" id="chk2" disabled/&gt;
+    &lt;label for="chk2">Disabled Checkbox&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+<br/>
+&lt;div class="checkbox"&gt;
+  &lt;div class="custom-checkbox no-animation"&gt;
+    &lt;input type="checkbox" name="chk3" id="chk3" /&gt;
+    &lt;label for="chk3">No Animation&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+        
+        <p class="m-t-30">To change color of checkbox, add an additional class to <code>.custom-checkbox</code>. There are 3 different colors in this version, <code>.checkbox-green</code>, <code>.checkbox-red</code> and <code>.checkbox-yellow</code>.</p>
+        <div class="example-wrapper clearfix m-t-10">
+          <span class="m-r-10 font-12">Inline Checkbox:</span>
+          <div class="checkbox-inline">
+            <div class="custom-checkbox font-12 checkbox-green">
+              <input type="checkbox" name="chk4" id="chk4" />
+              <label for="chk3">Green Checkbox</label>
+            </div>
+          </div>
+          <div class="checkbox-inline">
+            <div class="custom-checkbox font-12 checkbox-red">
+              <input type="checkbox" name="chk5" id="chk5" />
+              <label for="chk4">Red Checkbox</label>
+            </div>
+          </div>
+          <div class="checkbox-inline">
+            <div class="custom-checkbox font-12 checkbox-yellow">
+              <input type="checkbox" name="chk6" id="chk6" />
+              <label for="chk5">Yellow Checkbox</label>
+            </div>
+          </div>
+        </div>
+
+        <pre class="prettyprint linenums m-t-10"><code>&lt;div class="checkbox-inline"&gt;
+  &lt;div class="custom-checkbox checkbox-green"&gt;
+    &lt;input type="checkbox" name="chk4" id="chk4" /&gt;
+    &lt;label for="chk3">Green Checkbox&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="checkbox-inline"&gt;
+  &lt;div class="custom-checkbox checkbox-red"&gt;
+    &lt;input type="checkbox" name="chk5" id="chk5" /&gt;
+    &lt;label for="chk4">Red Checkbox&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="checkbox-inline"&gt;
+  &lt;div class="custom-checkbox checkbox-yellow"&gt;
+  &lt;input type="checkbox" name="chk6" id="chk6" /&gt;
+    &lt;label for="chk5"&gt;Yellow Checkbox&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+        <h4 class="m-t-30 text-upper"><b>Radio Button</b></h4>   
+        <p>Similar to checkbox, Quantum admin also has a custom style for radio button.</p>
+
+        <div class="example-wrapper clearfix m-t-20">
+          <div class="radio no-m font-12">
+            <label>
+              <input type="radio"/>
+              Default Radio Button
+            </label>
+          </div>
+        </div>
+
+        <pre class="prettyprint linenums m-t-10"><code>&lt;div class="radio"&gt;
+  &lt;label&gt;
+    &lt;input type="radio"/&gt;
+    Defalut Radio Button
+  &lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+
+        <div class="example-wrapper clearfix m-t-20">
+          <div class="radio no-m-t font-12">
+            <label>
+              <input type="radio" name="radioEx1" checked/>
+              Default Radio Button 1
+            </label>
+          </div>
+          <div class="radio no-m-b font-12">
+            <label>
+              <input type="radio" name="radioEx1"/>
+              Default Radio Button 2
+            </label>
+          </div>
+        </div>
+
+        <pre class="prettyprint linenums m-t-10"><code>&lt;div class="radio"&gt;
+  &lt;label&gt;
+    &lt;input type="radio"/&gt;
+    Defalut Radio Button
+  &lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+
+        <div class="example-wrapper clearfix m-t-20">
+          <div class="radio no-m-t">
+            <div class="custom-radio font-12">
+              <input id="radio1" type="radio" name="radioEx2" checked>
+              <label for="radio1">Option 1</label>
+            </div>
+          </div>
+          <div class="radio">
+            <div class="custom-radio font-12">
+              <input id="radio2" type="radio" name="radioEx2">
+              <label for="radio2">Option 2</label>
+            </div>
+          </div>
+          <div class="radio disabled no-m-b">
+            <div class="custom-radio font-12">
+              <input id="radio3" type="radio" name="radioEx2" disabled>
+              <label for="radio3">Disabled Radio</label>
+            </div>
+          </div>
+        </div>
+
+        <pre class="prettyprint linenums m-t-10"><code>&lt;div class="radio no-m-t"&gt;
+  &lt;div class="custom-radio"&gt;
+    &lt;input id="radio1" type="radio" name="radioEx2" checked&gt;
+    &lt;label for="radio1"&gt;Option 1&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="radio"&gt;
+  &lt;div class="custom-radio"&gt;
+    &lt;input id="radio2" type="radio" name="radioEx2"&gt;
+    &lt;label for="radio2"&gt;Option 2&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="radio disabled"&gt;
+  &lt;div class="custom-radio"&gt;
+    &lt;input id="radio3" type="radio" name="radioEx2" disabled&gt;
+    &lt;label for="radio3"&gt;Disabled Radio&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+        <div class="example-wrapper clearfix m-t-20">
+          <div class="radio-inline">
+            <div class="custom-radio font-12 radio-green">
+              <input type="radio" name="inlineCustomRadio" id="inlineRadioEx1" value="option1"><label for="inlineRadioEx1">Green</label>
+            </div>
+          </div>
+          <div class="radio-inline">
+            <div class="custom-radio font-12 radio-red">
+              <input type="radio" name="inlineCustomRadio" id="inlineRadioEx2" value="option2"><label for="inlineRadioEx2">Red</label>
+            </div>
+          </div>
+          <div class="radio-inline">
+            <div class="custom-radio font-12 radio-yellow">
+              <input type="radio" name="inlineCustomRadio" id="inlineRadioEx3" value="option3"><label for="inlineRadioEx3">Yellow</label>
+            </div>
+          </div>
+        </div>
+
+        <pre class="prettyprint linenums m-t-10"><code>&lt;div class="radio-inline"&gt;
+  &lt;div class="custom-radio radio-green"&gt;
+    &lt;input type="radio" name="inlineCustomRadio" id="inlineRadioEx1" value="option1"&gt;&lt;label for="inlineRadioEx1"&gt;Green&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="radio-inline"&gt;
+  &lt;div class="custom-radio radio-red"&gt;
+    &lt;input type="radio" name="inlineCustomRadio" id="inlineRadioEx2" value="option2"&gt;&lt;label for="inlineRadioEx2"&gt;Red&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="radio-inline"&gt;
+  &lt;div class="custom-radio radio-yellow"&gt;
+    &lt;input type="radio" name="inlineCustomRadio" id="inlineRadioEx3" value="option3"&gt;&lt;label for="inlineRadioEx3"&gt;Yellow&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;          
+</code></pre>
+
+        <h4 class="m-t-30 text-upper"><b>Button</b></h4>   
+
+        <div class="example-wrapper clearfix m-t-10">
+          <button type="button" class="btn btn-default">Default</button>
+          <button type="button" class="btn btn-primary">Primary</button>
+          <button type="button" class="btn btn-success">Success</button>
+          <button type="button" class="btn btn-info">Info</button>
+          <button type="button" class="btn btn-warning">Warning</button>
+          <button type="button" class="btn btn-danger">Danger</button>
+          <button type="button" class="btn btn-orange">Orange</button>
+          <button type="button" class="btn btn-gray">Gray</button>
+          <button type="button" class="btn btn-dark">Dark</button>
+          <button type="button" class="btn btn-link">Link</button>
+        </div>
+
+        <pre class="prettyprint linenums m-t-10"><code>&lt;button type="button" class="btn btn-default"&gt;Default&lt;/button&gt;<br/>          
+&lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+<br/>
+&lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;
+<br/>
+&lt;button type="button" class="btn btn-info"&gt;Info&lt;/button&gt;
+<br/>
+&lt;button type="button" class="btn btn-warning"&gt;Warning&lt;/button&gt;
+<br/>
+&lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt;
+<br/>
+&lt;button type="button" class="btn btn-orange"&gt;Orange&lt;/button&gt;
+<br/>
+&lt;button type="button" class="btn btn-gray"&gt;Gray&lt;/button&gt;
+<br/>
+&lt;button type="button" class="btn btn-dark"&gt;Dark&lt;/button&gt;
+<br/>
+&lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt;</code></pre>
+
+        <h4 class="m-t-30 text-upper"><b>Button Styling and Hover Effect</b></h4>  
+
+        <div class="example-wrapper clearfix m-t-10">
+          <button type="button" class="btn btn-default btn-rounded">Round Button</button>
+        </div>
+
+        <pre class="prettyprint linenums m-t-10"><code>&lt;button type="button" class="btn btn-default btn-rounded"&gt;Round Button&lt;/button&gt;</code></pre>
+
+        <div class="example-wrapper clearfix m-t-30">
+          <button type="button" class="btn btn-main btn-icon"><i class="fa fa-save"></i></button>
+          <button type="button" class="btn btn-primary btn-rounded btn-icon"><i class="fa fa-file"></i></button>
+        </div>
+
+        <pre class="prettyprint linenums m-t-10"><code>&lt;button type="button" class="btn btn-main btn-icon"&gt;&lt;i class="fa fa-save"&gt;&lt;/i&gt;&lt;/button&gt;
+        <br/>
+&lt;button type="button" class="btn btn-primary btn-rounded btn-icon"&gt;&lt;i class="fa fa-file"&gt;&lt;/i&gt;</code></pre>
+
+        <div class="example-wrapper clearfix m-t-30">
+          <div class="btn-group">
+            <button type="button" class="btn btn-main dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Action <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
+          
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary">Action</button>
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <pre class="prettyprint linenums m-t-10"><code>&lt;div class="btn-group"&gt;
+  &lt;button type="button" class="btn btn-main dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;
+    Action &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a href="#">Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role="separator" class="divider"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class="btn-group"&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;Action&lt;/button&gt;
+  &lt;button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;
+    &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;span class="sr-only"&gt;Toggle Dropdown&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li role="separator" class="divider"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+        <h4 class="m-t-30 text-upper"><b>Dropdown</b></h4>
+
+        <div class="example-wrapper clearfix m-t-20">
+          <ul class="dropdown-menu no-arrow static-dropdown">
+            <li class="dropdown-header">Dropdown header</li>
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+
+        <pre class="prettyprint linenums m-t-10"><code>&lt;ul class="dropdown-menu"&gt;
+  &lt;li class="dropdown-header"&gt;Dropdown header&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a>&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a>&lt;/li&gt;
+  &lt;li role="separator" class="divider"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+  
+      <h4 class="m-t-20 text-upper"><b>Dropdown Effect</b></h4>   
+      <p class="m-t-20">You can enable an animation by adding class <code>.dropdown-animated</code> to <code>.dropdown-menu</code>. In this version, there are 2 types of animation, pop and fade.</p>
+
+      <div class="example-wrapper clearfix m-t-10">
+        <div class="btn-group">
+          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Fade effect <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-animated fade-effect">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Pop Effect <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-animated pop-effect">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="m-t-30">Adding class <code>.dropdown-hover</code> to its parent element to trigger dropdown menu by hovering instead of clicking.
+
+      <div class="example-wrapper clearfix m-t-10">
+        <div class="btn-group dropdown-hover">
+          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Hover <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-hover">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+        <div class="btn-group dropdown-hover">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Hover with effect <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-animated fade-effect">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <pre class="prettyprint linenums m-t-10"><code>&lt;!-- To use fade effect, changing from class .pop-effect to .fade-effect --&gt;
+&lt;ul class="dropdown-menu dropdown-animated pop-effect"&gt;
+  &lt;li class="dropdown-header"&gt;Dropdown header&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Another action&lt;/a>&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Something else here&lt;/a>&lt;/li&gt;
+  &lt;li role="separator" class="divider"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+    <h4 class="m-t-30 text-upper"><b>Modal</b></h4>
+    <p>Add an extra class to change modal animation.</p>
+
+    <div class="example-wrapper clearfix m-t-10">
+      <button type="button" class="btn btn-default" data-toggle="modal" data-target=".modal-fade">Fade</button>
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target=".modal-scale-example">Scale</button>
+      <button type="button" class="btn btn-info" data-toggle="modal" data-target=".modal-slide-bottom">Slide in bottom</button>
+      <button type="button" class="btn btn-warning" data-toggle="modal" data-target=".modal-slide-left">Slide in left</button>
+      <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".modal-slide-right">Slide in right</button>
+      <button type="button" class="btn btn-gray" data-toggle="modal" data-target=".modal-flip-horizontal">Flip horizontal</button>
+      <button type="button" class="btn btn-dark" data-toggle="modal" data-target=".modal-flip-vertical">Flip Vertical</button>
+    </div>
+
+    <table class="table table-bordered table-striped font-12">
+      <thead>
+        <tr>
+          <th>Effect</th>
+          <th>Class</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fade</td>
+          <td><code>.modal-fade</code></td>
+        </tr>
+        <tr>
+          <td>Scale</td>
+          <td><code>.modal-scale</code></td>
+        </tr>
+        <tr>
+          <td>slide in bottom</td>
+          <td><code>.modal-slide-bottom</code></td>
+        </tr>
+        <tr>
+          <td>Slide in left</td>
+          <td><code>.modal-slide-left</code></td>
+        </tr>
+        <tr>
+          <td>Slide in right</td>
+          <td><code>.modal-slide-right</code></td>
+        </tr>
+        <tr>
+          <td>Horizonzal Flip</td>
+          <td><code>.modal-flip-horizontal</code></td>
+        </tr>
+        <tr>
+          <td>Vertical Flip</td>
+          <td><code>.modal-flip-vertical</code></td>
+        </tr>
+        <tr>
+          <td>None</td>
+          <td><code>.modal-no-animation</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <pre class="prettyprint linenums m-t-10"><code>&lt;div class="modal modal-slide-bottom fade" tabindex="-1" role="dialog"&gt;
+  &lt;div class="modal-dialog"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;&lt;/button&gt;
+        &lt;h4 class="modal-title"&gt;Modal title&lt;/h4&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;
+        ...
+      &lt;/div&gt;
+      &lt;div class="modal-footer"&gt;
+        &lt;button type="button" class="btn btn-gray" data-dismiss="modal"&gt;Close&lt;/button&gt;
+        &lt;button type="button" class="btn btn-main"&gt;Save changes&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+      <h4 class="m-t-30 text-upper"><b>Panel</b></h4> 
+      <div class="example-wrapper clearfix m-t-10">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="panel panel-default no-m-b">
+              <div class="panel-heading">
+                Panel with heading
+                <ul class="panel-toolbar list-unstyled font-12 m-d-3">
+                  <li class="refresh-widget"><a href="#" class="text-muted"><i class="icon-spinner9"></i></a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="icon-cog"></i></a>
+                    <ul class="dropdown-menu font-12 pull-right">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li><a href="#">Separated link</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#collapsedPanel1" class="expand-widget" data-toggle="collapse" aria-expanded="true"><i class="icon-circle-up"></i></a></li>
+                  <li><a href="#"><i class="icon-cancel-circle"></i></a></li>
+                </ul>
+              </div>
+              <div id="collapsedPanel1" class="collapse in">
+                <div class="panel-body">Panel content</div>
+              </div>
+              <div class="loading-wrap">
+                <div class="loading-dots">
+                  <div class="dot1"></div>
+                  <div class="dot2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <pre class="prettyprint linenums m-t-10"><code>&lt;div class="panel panel-default"&gt;
+  &lt;div class="panel-heading">
+    Panel with heading
+    &lt;ul class="panel-toolbar list-unstyled font-12 m-d-3">
+      &lt;li class="refresh-widget">&lt;a href="#" class="text-muted">&lt;i class="icon-spinner9">&lt;/i>&lt;/a>&lt;/li>
+      &lt;li class="dropdown">
+        &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">&lt;i class="icon-cog">&lt;/i>&lt;/a>
+        &lt;ul class="dropdown-menu font-12 pull-right">
+          &lt;li>&lt;a href="#">Action&lt;/a>&lt;/li>
+          &lt;li>&lt;a href="#">Another action&lt;/a>&lt;/li>
+          &lt;li>&lt;a href="#">Something else here&lt;/a>&lt;/li>
+          &lt;li>&lt;a href="#">Separated link&lt;/a>&lt;/li>
+        &lt;/ul>
+      &lt;/li>
+      &lt;li>&lt;a href="#collapsedPanel1" class="expand-widget" data-toggle="collapse" aria-expanded="true">&lt;i class="icon-circle-up">&lt;/i>&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="#">&lt;i class="icon-cancel-circle">&lt;/i>&lt;/a>&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+  <br/>
+  &lt;!-- No need this class if you don't use a collapsible panel --&gt;
+  &lt;div id="collapsedPanel1" class="collapse in">
+    &lt;div class="panel-body">Panel content&lt;/div>
+  &lt;/div>
+  &lt;div class="loading-wrap">
+    &lt;div class="loading-dots">
+      &lt;div class="dot1">&lt;/div>
+      &lt;div class="dot2">&lt;/div>
+    &lt;/div>
+  &lt;/div>
+&lt;/div></code></pre>
+
+        <p class="m-t-20">You can change the panel tool bar to collapsible options by using the code below.</p>
+
+      <div class="example-wrapper clearfix m-t-10">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="panel panel-white">
+              <div class="panel-heading font-header">
+                Panel with heading
+                <ul class="panel-toolbar list-unstyled">
+                  <li class="dropdown collapse-option">
+                    <a href="#" class="text-muted dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-h"></i></a>
+                    <ul class="dropdown-menu dropdown-animated fade-effect closed">
+                      <li><a href="#" class="text-muted refresh-widget"><i class="icon-spinner9"></i></a></li>
+                      <li><a href="#collapsedPanel90" class="expand-widget" data-toggle="collapse" aria-expanded="true"><i class="icon-circle-up"></i></a></li>
+                      <li><a href="#" class="fullscreen-widget"><i class="icon-enlarge"></i></a></li>
+                      <li><a><i class="icon-cross"></i></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div id="collapsedPanel90" class="collapse in">
+                <div class="panel-body">Panel content</div>
+              </div>
+              <div class="loading-wrap">
+                <div class="loading-dots">
+                  <div class="dot1"></div>
+                  <div class="dot2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <pre class="prettyprint linenums m-t-10"><code>
+&lt;!-- Use this toolbar for collapsible options --&gt;
+&lt;ul class="panel-toolbar list-unstyled"&gt;
+  &lt;li class="dropdown collapse-option"&gt;
+    &lt;a href="#" class="text-muted dropdown-toggle" data-toggle="dropdown" aria-expanded="false"&gt;&lt;i class="fa fa-ellipsis-h"&gt;&lt;/i>&lt;/a&gt;
+    &lt;ul class="dropdown-menu dropdown-animated fade-effect closed"&gt;
+      &lt;li&gt;&lt;a href="#" class="text-muted refresh-widget"&gt;&lt;i class="icon-spinner9">&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#collapsedPanel90" class="expand-widget" data-toggle="collapse" aria-expanded="true"&gt;&lt;i class="icon-circle-up"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#" class="fullscreen-widget"&gt;&lt;i class="icon-enlarge"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a&gt;&lt;i class="icon-cross"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+      </code></pre>
+      
+        <div class="page-header" id="cssSection"><h2>CSS</h2></div>
+        <p>This theme is built on Twitter's Bootstrap Framework. This documentation included some of the information about Bootstrap Framework, but If you are not familiar with Bootstrap, it's highly recommended that you learn directly from <a href="http://getbootstrap.com/">Twitter's Bootstrap documentation.</a></p>
+
+        <p>It's also built with Less css, all less files are located under <code>less/</code> directory.</p>
+
+        <h4 class="m-t-20 text-upper"><b>Theme color</b></h4>   
+        <p>The default primary color in this theme is <code>#ffb038</code> <i><b>(Yellow)</b></i>. You can change this color to your favorite color by updating value of less variable <code>@main-color)</code>. This variable is located under <code>less/variable.less</code></p> 
+
+        <p>Learn more about <a href="#http://lesscss.org/" target="_blank">less css</a></p>
+
+        <div class="m-t-20">
+          <div class="example-color m-r-10">
+            <div class="color-wrap" style="background-color:#ffb038;"></div>
+            <div class="color-code">
+              <span><b>#ffb038</b></span>
+              <div><code class="m-t-5">@main-color</code></div>
+            </div>
+          </div>    
+          <div class="example-color m-r-10">
+            <div class="color-wrap" style="background-color:#666F75;"></div>
+            <div class="color-code">
+              <span><b>#666F75</b></span>
+              <div><code class="m-t-5">@main-text-color</code></div>
+            </div>
+          </div>    
+          <div class="example-color m-r-10">
+            <div class="color-wrap" style="background-color:#f0f3f5;"></div>
+            <div class="color-code">
+              <span><b>#f0f3f5</b></span>
+              <div><code class="m-t-5">@border-color</code></div>
+            </div>
+          </div>    
+          <div class="example-color">
+            <div class="color-wrap" style="background-color:#e4eef0;"></div>
+            <div class="color-code">
+              <span><b>#e4eef0</b></span>
+              <div><code class="m-t-5">@dark-border-color</code></div>
+            </div>
+          </div>    
+        </div>
+
+        <hr class="line-dashed">
+
+        <div class="m-t-30">
+          <div class="example-color m-r-10">
+            <div class="color-wrap" style="background-color:#5090F7;"></div>
+            <div class="color-code">
+              <span><b>#5090F7</b></span>
+              <div><code class="m-t-5">@primary-color</code></div>
+            </div>
+          </div>    
+
+          <div class="example-color m-r-10">
+            <div class="color-wrap" style="background-color:#64d4e4;"></div>
+            <div class="color-code">
+              <span><b>#64d4e4</b></span>
+              <div><code class="m-t-5">@info-color</code></div>
+            </div>
+          </div>    
+
+          <div class="example-color m-r-10">
+            <div class="color-wrap" style="background-color:#56cf87;"></div>
+            <div class="color-code">
+              <span><b>#56cf87</b></span>
+              <div><code class="m-t-5">@success-color</code></div>
+            </div>
+          </div>    
+
+          <div class="example-color m-r-10">
+            <div class="color-wrap" style="background-color:#ffb038;"></div>
+            <div class="color-code">
+              <span><b>#ffb038</b></span>
+              <div><code class="m-t-5">@warning-color</code></div>
+            </div>
+          </div>    
+
+          <div class="example-color m-r-10">
+            <div class="color-wrap" style="background-color:#fd7a7b;"></div>
+            <div class="color-code">
+              <span><b>#fd7a7b</b></span>
+              <div><code class="m-t-5">@danger-color</code></div>
+            </div>
+          </div>    
+
+          <div class="example-color m-r-10">
+            <div class="color-wrap" style="background-color:#f08a61;"></div>
+            <div class="color-code">
+              <span><b>#f08a61</b></span>
+              <div><code class="m-t-5">@orange-color</code></div>
+            </div>
+          </div>    
+
+          <div class="example-color m-r-10">
+            <div class="color-wrap" style="background-color:#936fca;"></div>
+            <div class="color-code">
+              <span><b>#936fca</b></span>
+              <div><code class="m-t-5">@purple-color</code></div>
+            </div>
+          </div>    
+        </div>
+
+        <hr class="line-dashed">
+
+        <div class="m-t-30">
+          <div class="example-color m-r-10">
+            <div class="color-wrap bordered" style="background-color:#f6f9fa;"></div>
+            <div class="color-code">
+              <span><b>#f6f9fa</b></span>
+              <div><code class="m-t-5">@light-color</code></div>
+            </div>
+          </div>    
+          <div class="example-color m-r-10">
+            <div class="color-wrap bordered" style="background-color:#e4eef0;"></div>
+            <div class="color-code">
+              <span><b>#e4eef0</b></span>
+              <div><code class="m-t-5">@light-color2</code></div>
+            </div>
+          </div>    
+          <div class="example-color m-r-10">
+            <div class="color-wrap bordered" style="background-color:#f9fafb;"></div>
+            <div class="color-code">
+              <span><b>#f9fafb</b></span>
+              <div><code class="m-t-5">@lighter-color</code></div>
+            </div>
+          </div>    
+        </div>
+
+        <hr class="line-dashed">
+
+        <div class="m-t-30">
+          <div class="example-color m-r-10">
+            <div class="color-wrap bordered" style="background-color:#95a4b8;"></div>
+            <div class="color-code">
+              <span><b>#95a4b8</b></span>
+              <div><code class="m-t-5">@gray-color</code></div>
+            </div>
+          </div> 
+          <div class="example-color">
+            <div class="color-wrap bordered" style="background-color:#667b99;"></div>
+            <div class="color-code">
+              <span><b>#667b99</b></span>
+              <div><code class="m-t-5">@gray-color2</code></div>
+            </div>
+          </div> 
+        </div>
+
+        <hr class="line-dashed">
+
+        <div class="m-t-30">
+          <div class="example-color m-r-10">
+            <div class="color-wrap" style="background-color:#32465b;"></div>
+            <div class="color-code">
+              <span><b>#32465b</b></span>
+              <div><code class="m-t-5">@dark-color</code></div>
+            </div>
+          </div>    
+          <div class="example-color m-r-10">
+            <div class="color-wrap" style="background-color:#2f4154;"></div>
+            <div class="color-code">
+              <span><b>#2f4154</b></span>
+              <div><code class="m-t-5">@dark-color2</code></div>
+            </div>
+          </div>    
+          <div class="example-color m-r-10">
+            <div class="color-wrap" style="background-color:#273645;"></div>
+            <div class="color-code">
+              <span><b>#273645</b></span>
+              <div><code class="m-t-5">@dark-color3</code></div>
+            </div>
+          </div>    
+        </div>
+
+        <h4 class="m-t-20 text-upper"><b>Preloading Effect</b></h4>
+        <p>Display Loading Graphic Until Page Fully Loaded including fade in and fade out effect when changing web page.</p>
+        <p>Adding class <code>.animsition</code> to <code>.wrapper</code></p>
+        <div class="highlight m-t-10">
+          <pre class="prettyprint linenums"><code>&lt;div class="wrapper animsition"&gt;
+  ...
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <p class="m-t-30">If you want "linkElement" to use an animation, you have to add this class <code>.animsition-link</code></p>
+        <div class="highlight m-t-10">
+          <pre class="prettyprint linenums"><code>&lt;a href="somepage.html" class="animsition-link"&gt;animsition link 1&lt;/a&gt;</code></pre>
+        </div>
+
+        <p class="m-t-20">See full animsition documentation <a href="http://git.blivesta.com/animsition/">here</a></p>
+
+        <h4 class="m-t-30 text-upper"><b>Helper Class</b></h4>
+
+        <h5 class="text-upper m-t-30"><b>Background Color</b></h5>
+        <p>Easily set background color by adding these class to an element.</p>
+        <div class="m-t-20">
+          <div class="example-color m-r-10">
+            <div class="color-wrap" style="background-color:#ffb038;"></div>
+            <div class="color-code">
+              <span><b>#ffb038</b></span>
+              <div><code class="m-t-5">.bg-main</code></div>
+            </div>
+          </div>    
+        </div>
+
+        <hr class="line-dashed">
+
+        <div class="m-t-30">
+          <div class="example-color m-r-10">
+            <div class="color-wrap" style="background-color:#5090F7;"></div>
+            <div class="color-code">
+              <span><b>#5090F7</b></span>
+              <div><code class="m-t-5">.bg-primary</code></div>
+            </div>
+          </div>    
+
+          <div class="example-color m-r-10">
+            <div class="color-wrap" style="background-color:#64d4e4;"></div>
+            <div class="color-code">
+              <span><b>#64d4e4</b></span>
+              <div><code class="m-t-5">.bg-info</code></div>
+            </div>
+          </div>    
+
+          <div class="example-color m-r-10">
+            <div class="color-wrap" style="background-color:#56cf87;"></div>
+            <div class="color-code">
+              <span><b>#56cf87</b></span>
+              <div><code class="m-t-5">.bg-success</code></div>
+            </div>
+          </div>    
+
+          <div class="example-color m-r-10">
+            <div class="color-wrap" style="background-color:#ffb038;"></div>
+            <div class="color-code">
+              <span><b>#ffb038</b></span>
+              <div><code class="m-t-5">.bg-warning</code></div>
+            </div>
+          </div>    
+
+          <div class="example-color m-r-10">
+            <div class="color-wrap" style="background-color:#fd7a7b;"></div>
+            <div class="color-code">
+              <span><b>#fd7a7b</b></span>
+              <div><code class="m-t-5">.bg-danger</code></div>
+            </div>
+          </div>    
+
+          <div class="example-color m-r-10">
+            <div class="color-wrap" style="background-color:#f08a61;"></div>
+            <div class="color-code">
+              <span><b>#f08a61</b></span>
+              <div><code class="m-t-5">.bg-orange</code></div>
+            </div>
+          </div>    
+
+          <div class="example-color m-r-10">
+            <div class="color-wrap" style="background-color:#936fca;"></div>
+            <div class="color-code">
+              <span><b>#936fca</b></span>
+              <div><code class="m-t-5">.bg-purple</code></div>
+            </div>
+          </div>    
+        </div>
+
+        <hr class="line-dashed">
+
+        <div class="m-t-30">
+          <div class="example-color m-r-10">
+            <div class="color-wrap bordered" style="background-color:#f6f9fa;"></div>
+            <div class="color-code">
+              <span><b>#f6f9fa</b></span>
+              <div><code class="m-t-5">.bg-light</code></div>
+            </div>
+          </div>    
+        </div>
+
+        <hr class="line-dashed">
+
+        <div class="m-t-30">
+          <div class="example-color m-r-10">
+            <div class="color-wrap bordered" style="background-color:#95a4b8;"></div>
+            <div class="color-code">
+              <span><b>#95a4b8</b></span>
+              <div><code class="m-t-5">.bg-gray</code></div>
+            </div>
+          </div>    
+        </div>
+
+        <hr class="line-dashed">
+
+        <div class="m-t-30">
+          <div class="example-color m-r-10">
+            <div class="color-wrap" style="background-color:#32465b;"></div>
+            <div class="color-code">
+              <span><b>#32465b</b></span>
+              <div><code class="m-t-5">.bg-dark1</code></div>
+            </div>
+          </div>    
+          <div class="example-color m-r-10">
+            <div class="color-wrap" style="background-color:#2f4154;"></div>
+            <div class="color-code">
+              <span><b>#2f4154</b></span>
+              <div><code class="m-t-5">.bg-dark2</code></div>
+            </div>
+          </div>    
+          <div class="example-color m-r-10">
+            <div class="color-wrap" style="background-color:#273645;"></div>
+            <div class="color-code">
+              <span><b>#273645</b></span>
+              <div><code class="m-t-5">.bg-dark3</code></div>
+            </div>
+          </div>    
+        </div>
+
+        <h5 class="text-upper m-t-30"><b>Margin</b></h5>
+        <p>Adding margin to an element. <code>.m-t-*</code>, <code>.m-l-*</code>, <code>.m-r-*</code> and <code>.m-b-*</code></p>
+
+        <pre class="prettyprint linenums"><code>&lt;div class="m-t-5"&gt;&lt;/div&gt;
+&lt;div class="m-t-10"&gt;&lt;/div&gt;
+&lt;div class="m-t-15"&gt;&lt;/div&gt;
+&lt;div class="m-t-20"&gt;&lt;/div&gt;
+&lt;div class="m-t-30"&gt;&lt;/div&gt;
+</code></pre>
+
+        <pre class="prettyprint linenums"><code>.m-t-5  {
+  margin-top: 5px;  
+}
+
+.m-t-10  {
+  margin-top: 10px;  
+}
+
+.m-t-15  {
+  margin-top: 15px;  
+}
+
+.m-t-20  {
+  margin-top: 20px;  
+}
+
+.m-t-30  {
+  margin-top: 30px;  
+}
+        </code></pre>
+
+        <p class="m-t-20">Applying these class to remove margin from an element.<p>
+
+        <pre class="prettyprint linenums m-t-10"><code>&lt;div class="no-m"&gt;&lt;/div&gt;
+&lt;div class="no-m-t"&gt;&lt;/div&gt;
+&lt;div class="no-m-l"&gt;&lt;/div&gt;
+&lt;div class="no-m-r"&gt;&lt;/div&gt;
+&lt;div class="no-m-b"&gt;&lt;/div&gt;
+</code></pre>
+
+        <pre class="prettyprint linenums"><code>.no-m  {
+  margin: 0;
+}
+
+.no-m-t  {
+  margin-top: 0;  
+}
+
+.no-m-l  {
+  margin-left: 0;
+}
+
+.no-m-r  {
+  margin-right: 0;
+}
+
+.no-m-b  {
+  margin-bottom: 0;
+}
+        </code></pre>
+
+        <h5 class="text-upper m-t-30"><b>Content Padding</b></h5>
+        <p>Adding some padding to an element.</p>
+        <pre class="prettyprint linenums m-t-10"><code>&lt;div class="content-wrap"&gt;&lt;/div&gt;
+  ...
+&lt;/div&gt;
+</code></pre>
+
+        <pre class="prettyprint linenums"><code>.content-wrap  {
+  padding: 15px;
+}
+        </code></pre>
+
+        <h5 class="text-upper m-t-30"><b>Bordered</b></h5>
+        <p>Adding border to an element.</p>
+        <pre class="prettyprint linenums m-t-10"><code>&lt;div class="b-all"&gt;&lt;/div&gt;
+&lt;div class="b-t"&gt;&lt;/div&gt;
+&lt;div class="b-l"&gt;&lt;/div&gt;
+&lt;div class="b-r"&gt;&lt;/div&gt;
+&lt;div class="b-b"&gt;&lt;/div&gt;
+</code></pre>
+
+        <pre class="prettyprint linenums"><code>.b-all  {
+  border: 1px solid @border-color;   
+}
+
+.b-t  {
+  border-top: 1px solid @border-color;   
+}
+
+.b-l  {
+  border-left: 1px solid @border-color;   
+}
+
+.b-r  {
+  border-right: 1px solid @border-color;   
+}
+
+.b-b  {
+  border-bottom: 1px solid @border-color;   
+}
+        </code></pre>
+
+      <div class="page-header" id="changeLogSection">
+        <h2><div class="step-circle">4</div> Change Log</h2>
+      </div>
+
+      <b>Version 1.0.1</b>
+      <pre class="prettyprint linenums m-t-10 m-b-20"><code>- Upgraded to Bootstrap 3.3.6
+- A few bug fixes and enhancements</code></pre>
+  
+      <b>Version 1.0</b>
+      <pre class="prettyprint linenums m-t-10"><code>- Initial Release</code></pre>
+
+      <div class="page-header" id="creditSection"><h2><div class="step-circle">5</div> Credit</h2></div>
+        <ul>
+          <li><a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a></li>
+          <li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
+          <li><a href="https://daneden.github.io/animate.css/" target="_blank">Animate Css</a></li>
+          <li><a href="http://git.blivesta.com/animsition/" target="_blank">Animsition</a></li>
+          <li><a href="http://ianlunn.github.io/Hover/" target="_blank">Hover</a></li>
+          <li><a href="https://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a></li>
+          <li><a href="https://hpneo.github.io/gmaps/" target="_blank">Gmaps</a></li>
+          <li><a href="http://isotope.metafizzy.co/" target="_blank">Isotope</a></li>
+          <li><a href="http://demos.flesler.com/jquery/localScroll/" target="_blank">Local Scroll</a></li>
+          <li><a href="http://demos.flesler.com/jquery/scrollTo/" target="_blank">Scroll To</a></li>
+          <li><a href="https://modernizr.com/" target="_blank">Modernizr</a></li>
+          <li><a href="http://owlgraphic.com/owlcarousel/" target="_blank">Owl Carousel</a></li>
+          <li><a href="http://revolution.themepunch.com/" target="_blank">Revolution Slider</a></li>
+          <li><a href="http://imakewebthings.com/waypoints/" target="_blank">Waypoint</a></li>
+        </ul>
+
+        <h4 class="no-m-b text-upper m-t-30"><b>Images</b></h4>
+        <p class="m-t-20">All images viewed in the live preview are for demo purposes only and are not included with your purchase.</p>
+      </div><!-- /.container -->
+    </div>
+    <!-- /.wrapper -->
+    
+    <div class="modal modal-fade fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-gray" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-main">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal-scale modal-scale-example fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-gray" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-main">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal-slide-bottom fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-gray" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-main">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal-slide-left fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-gray" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-main">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal-slide-right fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-gray" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-main">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal-flip-horizontal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-gray" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-main">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal modal-flip-vertical fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-gray" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-main">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+		<!-- Jquery -->
+  	<script src="../js/jquery-1.11.2.min.js"></script>
+  	
+    <!-- Bootstrap -->
+    <script src="../bootstrap/bootstrap.min.js"></script>
+
+    <!-- Prettify -->
+    <script src="js/run_prettify.js"></script>
+
+    <!-- Quantum -->
+    <script src="js/app.js"></script>
+	</body>
+</html>

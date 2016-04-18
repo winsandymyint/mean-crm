@@ -3,34 +3,34 @@ angular.module('courseService', [])
 .factory('Course', function($http) {
 
 	// create a new object
-	var userFactory = {};
+	var courseFactory = {};
 
-	// get a single user
-	userFactory.get = function(id) {
-		return $http.get('/api/users/' + id);
+	// get a single course
+	courseFactory.get = function(id) {
+		return $http.get('/api/courses/' + id);
 	};
 
-	// get all users
-	userFactory.all = function() {
-		return $http.get('/api/users/');
+	// get all courses
+	courseFactory.all = function() {
+		return $http.get('/api/courses/');
 	};
 
-	// create a user
-	userFactory.create = function(userData) {
-		return $http.post('/api/users/', userData);
+	// create a course
+	courseFactory.create = function(courseData) {
+		return $http.post('/api/courses/', courseData);
 	};
 
-	// update a user
-	userFactory.update = function(id, userData) {
-		return $http.put('/api/users/' + id, userData);
+	// update a course
+	courseFactory.update = function(id, courseData) {
+		return $http.put('/api/courses/' + id, courseData);
 	};
 
-	// delete a user
-	userFactory.delete = function(id) {
-		return $http.delete('/api/users/' + id);
+	// delete a course
+	courseFactory.delete = function(id) {
+		return $http.delete('/api/courses/' + id);
 	};
 
-	// return our entire userFactory object
-	return userFactory;
+	// return our entire courseFactory object
+	return courseFactory;
 
 });

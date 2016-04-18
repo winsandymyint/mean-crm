@@ -1,5 +1,6 @@
 var bodyParser = require('body-parser'); 	// get body-parser
 var User       = require('../models/user');
+var Course     = require('../models/course');
 var jwt        = require('jsonwebtoken');
 var config     = require('../../config');
 
@@ -14,14 +15,16 @@ module.exports = function(app, express) {
 	apiRouter.post('/sample', function(req, res) {
 
 		// look for the user named chris
+		console.log(Course)
+
 		User.findOne({ 'username': 'chris' }, function(err, user) {
 
 			// if there is no chris user, create one
 			if (!user) {
 				var sampleUser = new User();
 
-				sampleUser.name = 'Ye Min Htut';  
-				sampleUser.username = 'bean'; 
+				sampleUser.name = 'Dede';  
+				sampleUser.username = 'ivy'; 
 				sampleUser.password = 'vampire';
 
 				sampleUser.save();
@@ -177,6 +180,45 @@ module.exports = function(app, express) {
 			});
 		});
 
+	apiRouter.route('/courses')
+
+		// create a course (accessed at POST http://localhost:8080/courses)
+		.post(function(req, res) {
+			console.log(res.body)
+			var course = new Course();		// create a new instance of the User model
+			course.instructorid = req.body.instructorid;  // set the courses name (comes from the request)
+			course.title = req.body.title;  // set the courses coursename (comes from the request)
+			course.subtitle = req.body.subtitle;  // set the courses password (comes from the request)
+			course.language = req.body.language;
+			course.category = req.body.category;
+			course.instructionlevel = req.body.instructionlevel;
+			course.duration = req.body.duration;
+			course.summary = req.body.summary;
+			course.coverimage = req.body.coverimage;
+			course.video = req.body.video;
+			course.price = req.body.price;
+			course.review = req.body.review;
+
+			course.save(function(err) {
+				if (err) {
+					return res.send(err);
+				}
+				// return a message
+				res.json({ message: 'Course created!' });
+			});
+
+		})
+
+		// get all the courses (accessed at GET http://localhost:8080/api/courses)
+		.get(function(req, res) {
+
+			Course.find({}, function(err, courses) {
+				if (err) res.send(err);
+
+				// return the courses
+				res.json(courses);
+			});
+		});
 	// on routes that end in /users/:user_id
 	// ----------------------------------------------------
 	apiRouter.route('/users/:user_id')
@@ -226,6 +268,59 @@ module.exports = function(app, express) {
 			User.remove({
 				_id: req.params.user_id
 			}, function(err, user) {
+				if (err) res.send(err);
+
+				res.json({ message: 'Successfully deleted' });
+			});
+		});
+
+	apiRouter.route('/courses/:course_id')
+
+		// get the course with that id
+		.get(function(req, res) {
+			Course.findById(req.params.course_id, function(err, course) {
+				if (err) res.send(err);
+
+				// return that course
+				res.json(course);
+			});
+		})
+
+		// update the course with this id
+		.put(function(req, res) {
+			Course.findById(req.params.course_id, function(err, course) {
+
+				if (err) res.send(err);
+
+				// set the new user information if it exists in the request
+				if (req.body.name) course.name = req.body.name;
+				if (req.body.username) course.username = req.body.username;
+				if (req.body.password) course.password = req.body.password;
+				console.log(req.body)
+				// if (req.body.user.avator) = req.body.avator;
+				// if (req.body.user.location) = req.body.location;
+				// if (req.body.user.gender) = req.body.gender;
+				// if (req.body.user.birthday) = req.body.birthday;
+				// if (req.body.user.aboutme) = req.body.aboutme;
+				// if (req.body.user.websitelink) = req.body.websitelink;
+				// if (req.body.user.country) = req.body.country;
+				// if (req.body.user.type) = req.body.type;
+				// save the user
+				course.save(function(err) {
+					if (err) res.send(err);
+
+					// return a message
+					res.json({ message: 'User updated!' });
+				});
+
+			});
+		})
+
+		// delete the course with this id
+		.delete(function(req, res) {
+			Course.remove({
+				_id: req.params.course_id
+			}, function(err, course) {
 				if (err) res.send(err);
 
 				res.json({ message: 'Successfully deleted' });

@@ -1,38 +1,57 @@
 <div class="page-header">
 	<h1>
-		Members
-		<a href="/users/create" class="btn btn-default">
+		Courses
+		<a href="/courses/create" class="btn btn-default">
 			<span class="glyphicon glyphicon-plus"></span> 
-			New Member
+			New Courses
 		</a>
 	</h1>
 
 </div>
 
-<div class="jumbotron text-center" ng-show="user.processing">
+<div class="jumbotron text-center" ng-show="course.processing">
 	<span class="glyphicon glyphicon-repeat spinner"></span>
-	<p>Loading Members...</p>
+	<p>Loading Courses...</p>
 </div>
 
-<table class="table table-bordered table-striped" ng-show="user.users">
+{{course}}
+<table class="table table-bordered table-striped" ng-show="course.courses">
 	<thead>
 		<tr>
 			<th>_id</th>
-			<th>Name</th>
-			<th>Username</th>
-			<th>Level</th>
+			<th>Instructorid</th>
+			<th>Title</th>
+			<th>Subtitle</th>
+			<th>Language</th>
+			<th>Category</th>
+			<th>Instruction Level</th>
+			<th>Duration</th>
+			<th>Summary</th>
+			<th>Coverimage</th>
+			<th>Video</th>
+			<th>Price</th>
+			<th>Review</th>
 			<th class="col-sm-2"></th>
 		</tr>
 	</thead>
 	<tbody>
-		<tr ng-repeat="person in user.users">
-			<td>{{ person._id }}</td>
-			<td>{{ person.name }}</td>
-			<td>{{ person.username }}</td>
-			<td>{{ person.level}}</td>
+		<tr ng-repeat="co in course.courses">
+			<td>{{ co._id }}</td>
+			<td>{{ co.Instructorid}}</td>
+			<td>{{ co.title}}</td>
+			<td>{{ co.subtitle}}</td>
+			<td>{{ co.language}}</td>
+			<td>{{ co.category}}</td>
+			<td>{{ co.instructionlevel}}</td>
+			<td>{{ co.duration}}</td>
+			<td>{{ co.summary}}</td>
+			<td>{{ co.coverimage}}</td>
+			<td>{{ co.video}}</td>
+			<td>{{ co.price}}</td>
+			<td>{{ co.review}}</td>
 			<td class="col-sm-2">
-				<a ng-href="/users/{{ person._id }}" class="btn btn-danger">Edit</a>
-				<a href="#" ng-click="user.deleteUser(person._id)" class="btn btn-primary">Delete</a>
+				<a ng-href="/courses/{{ co._id }}" class="btn btn-danger">Edit</a>
+				<a href="#" ng-click="course.deleteCourse(co._id)" class="btn btn-primary">Delete</a>
 			</td>
 		</tr>
 	</tbody>

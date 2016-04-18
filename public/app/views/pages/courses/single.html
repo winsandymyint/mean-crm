@@ -1,94 +1,98 @@
 <div class="page-header">
-	<h1 ng-if="user.type == 'create'">Create User</h1>
-	<h1 ng-if="user.type == 'edit'">Edit User</h1>
+	<h1 ng-if="course.type == 'create'">Create Course</h1>
+	<h1 ng-if="course.type == 'edit'">Edit Course</h1>
 </div>
 
-<form class="form-horizontal" ng-submit="user.saveUser()">
-	{{user}}
+<form class="form-horizontal" ng-submit="course.saveCourse()">
+	{{course}}
 	<div class="form-group">
-		<label class="col-sm-2 control-label">Name</label>
+		<label class="col-sm-2 control-label">Instructorid</label>
 		<div class="col-sm-6">
-			<input type="text" class="form-control" ng-model="user.userData.name">
+			<input type="text" class="form-control" ng-model="course.courseData.Instructorid">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">title</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" ng-model="course.courseData.title">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">subtitle</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" ng-model="course.courseData.subtitle">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">language</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" ng-model="course.courseData.language">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">category</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" ng-model="course.courseData.category">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">instructionlevel</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" ng-model="course.courseData.instructionlevel">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">duration</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" ng-model="course.courseData.duration">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">summary</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" ng-model="course.courseData.summary">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">coverimage</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" ng-model="course.courseData.coverimage">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">video</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" ng-model="course.courseData.video">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">price</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" ng-model="course.courseData.price">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">review</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" ng-model="course.courseData.review">
 		</div>
 	</div>
 
-	<div class="form-group">
-		<label class="col-sm-2 control-label">Username</label>
-		<div class="col-sm-6">
-			<input type="text" class="form-control" ng-model="user.userData.username">
-		</div>
-	</div>
-
-	<div class="form-group">
-		<label class="col-sm-2 control-label">Password</label>
-		<div class="col-sm-6">
-			<input type="password" class="form-control" ng-model="user.userData.password">
-		</div>
-	</div>
-
-	<div class="form-group">
-		<label class="col-sm-2 control-label">Avator</label>
-		<div class="col-sm-6">
-			<input type="text" class="form-control" ng-model="user.userData.avator">
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label">Location</label>
-		<div class="col-sm-6">
-			<input type="text" class="form-control" ng-model="user.userData.location">
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label">Gender</label>
-		<div class="col-sm-6">
-			<input type="text" class="form-control" ng-model="user.userData.gender">
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label">birthday</label>
-		<div class="col-sm-6">
-			<input type="text" class="form-control" ng-model="user.userData.birthday">
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label">About Me</label>
-		<div class="col-sm-6">
-			<input type="text" class="form-control" ng-model="user.userData.aboutme">
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label">Website Link</label>
-		<div class="col-sm-6">
-			<input type="text" class="form-control" ng-model="user.userData.websitelink">
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label">Country</label>
-		<div class="col-sm-6">
-			<input type="text" class="form-control" ng-model="user.userData.country">
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label">Type</label>
-		<div class="col-sm-6">
-			<input type="text" class="form-control" ng-model="user.userData.type">
-		</div>
-	</div>
 	
 	<div class="form-group">
 	<div class="col-sm-offset-2 col-sm-6">
-		<button type="submit" class="btn btn-success btn-lg btn-block" ng-if="user.type == 'create'">Create User</button>
-		<button type="submit" class="btn btn-success btn-lg btn-block" ng-if="user.type == 'edit'">Update User</button>
+		<button type="submit" class="btn btn-success btn-lg btn-block" ng-if="course.type == 'create'">Create Course</button>
+		<button type="submit" class="btn btn-success btn-lg btn-block" ng-if="course.type == 'edit'">Update Course</button>
 	</div>
 	</div>
 
 </form>
 
-<div class="row show-hide-message" ng-show="user.message">
+<div class="row show-hide-message" ng-show="course.message">
 	<div class="col-sm-6 col-sm-offset-2">
 		
 		<div class="alert alert-info">
-			{{ user.message }}
+			{{ course.message }}
 		</div>
 
 	</div>

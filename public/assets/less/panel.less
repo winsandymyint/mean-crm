@@ -1,0 +1,419 @@
+//== Panels
+.panel  {
+    position: relative;    
+}
+
+.panel-heading  {
+    padding: 15px;    
+}
+
+.panel-footer  {
+    padding: 15px;    
+}
+
+.panel-white    {
+    border: 1px solid @border-color;
+    
+    >.panel-heading {
+        border-bottom-color: @border-color;
+    }
+    
+    >.panel-footer {
+        border-top-color: @border-color;
+        background-color: #fff;
+    }
+}
+
+.panel-default  {
+    border-color: @panel-default-border-color; 
+    
+    >.panel-heading {
+        background-color: @panel-default-heading-color;
+        border-color: @panel-default-border-color; 
+        color: @main-text-color;
+    }
+}
+
+.panel-footer {   
+    background-color: @panel-default-heading-color;
+    border-top-color: @border-color;
+}
+
+.panel-toolbar  {
+    float: right;
+    margin-bottom: 0;
+    
+    > li    {
+        float: left;
+        cursor: pointer;
+        
+        > a {
+            display: block;
+            padding: 0 5px;
+            color: @muted-color;
+            
+            &:hover {
+                color: @main-text-color;    
+            }
+            
+            &:hover, &:focus  {
+                text-decoration: none;
+            }
+        }
+        
+        &:last-child    {
+            > a {
+                padding-right: 0;    
+            }
+        }
+        
+        &.collapse-option   {
+            &.icon-3    {
+                > ul    {
+                    min-width: 130px;    
+                }
+            }
+            
+            &.icon-2    {
+                > ul    {
+                    min-width: 87px;    
+                }
+            }
+            
+            &.open  {
+                > a {
+                    i   {
+                        display: inline-block;
+                        transform: rotate(90deg);
+                        -webkit-transform: rotate(90deg);
+                    }
+                }
+            }
+            
+            > a {
+                position: relative;
+                
+                i   {
+                    transition: transform 0.4s;
+                    -webkit-transition: -webkit-transform 0.4s;
+                }
+            }
+            
+            > ul    {
+                right: 20px;
+                left: auto;
+                padding: 0;
+                top: -50%;
+                min-width: 173px;
+                margin-top: 0;
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+               
+                > li    {
+                    float: left;
+                    
+                    > a {
+                        display: block; 
+                        padding: 10px 15px;
+                        
+                        &:hover, &:focus {
+                            background-color: @light-color;
+                        }
+                    }
+                    
+                    + li    {
+                        border-left: 1px solid @border-color;    
+                    }
+                }
+            }
+        }
+    }
+    
+    .dropdown-menu  {
+        &:before, &:after   {
+            display: none;    
+        }
+    }
+    
+    .switch-toggle   {
+        margin-top: -3px;    
+    }
+}
+
+.panel-main {
+    > .panel-heading    {
+        background-color: @main-color;
+        border-color: lighten(@main-color,7%);   
+        color: #fff;
+    }
+}
+
+.panel-primary  {
+    border-color: @primary-color;
+    
+    >.panel-heading {
+        background-color: @primary-color;
+        border-color: @primary-color;
+    }
+    
+    &.no-bordered {
+        border: 0;   
+        
+        >.panel-heading {
+            border: 1px solid @primary-color;
+        }
+        
+        >.panel-body {
+            border: 1px solid transparent;
+            border-top-width: 0;
+        }
+    }
+    
+    .panel-toolbar > li > a {
+        color: @primary-muted-color;
+        
+        &:hover {
+            color: #fff;    
+        }
+    }
+}
+
+.panel-success  {
+    border-color: @success-color;
+    
+    >.panel-heading {
+        background-color: @success-color;
+        border-color: @success-color;
+        color: #fff;
+    }
+    
+    &.no-bordered {
+        border: 0;   
+        
+        >.panel-heading {
+            border: 1px solid @success-color;
+        }
+        
+        >.panel-body {
+            border: 1px solid transparent;
+            border-top-width: 0;
+        }
+    }
+    
+    .panel-toolbar > li > a {
+        color: @success-muted-color;
+        
+        &:hover {
+            color: #fff;    
+        }
+    }
+}
+
+.panel-info  {
+    border-color: @info-color;
+    
+    >.panel-heading {
+        background-color: @info-color;
+        border-color: @info-color;
+        color: #fff;
+    }
+    
+    &.no-bordered {
+        border: 0;   
+        
+        >.panel-heading {
+            border: 1px solid @info-color;
+        }
+        
+        >.panel-body {
+            border: 1px solid transparent;
+            border-top-width: 0;
+        }
+    }
+    
+    .panel-toolbar > li > a {
+        color: @main-muted-color;
+        
+        &:hover {
+            color: #fff;    
+        }
+    }
+}
+
+.panel-warning  {
+    border-color: @warning-color;
+    
+    >.panel-heading {
+        background-color: @warning-color;
+        border-color: @warning-color;
+        color: #fff;
+    }
+    
+    &.no-bordered {
+        border: 0;   
+        
+        >.panel-heading {
+            border: 1px solid @warning-color;
+        }
+        
+        >.panel-body {
+            border: 1px solid transparent;
+            border-top-width: 0;
+        }
+    }
+    
+    .panel-toolbar > li > a {
+        color: @warning-muted-color;
+        
+        &:hover {
+            color: #fff;    
+        }
+    }
+}
+
+.panel-danger  {
+    border-color: @danger-color;
+    
+    >.panel-heading {
+        background-color: @danger-color;
+        border-color: @danger-color;
+        color: #fff;
+    }
+    
+    &.no-bordered {
+        border: 0;   
+        
+        >.panel-heading {
+            border: 1px solid @danger-color;
+        }
+        
+        >.panel-body {
+            border: 1px solid transparent;
+            border-top-width: 0;
+        }
+    }
+    
+    .panel-toolbar > li > a {
+        color: @danger-muted-color;
+        
+        &:hover {
+            color: #fff;    
+        }
+    }
+}
+
+.panel-orange  {
+    border-color: @orange-color;
+    
+    >.panel-heading {
+        background-color: @orange-color;
+        border-color: @orange-color;
+        color: #fff;
+    }
+    
+    &.no-bordered {
+        border: 0;   
+        
+        >.panel-heading {
+            border: 1px solid @orange-color;
+        }
+        
+        >.panel-body {
+            border: 1px solid transparent;
+            border-top-width: 0;
+        }
+    }
+    
+    .panel-toolbar > li > a {
+        color: @orange-muted-color;
+        
+        &:hover {
+            color: #fff;    
+        }
+    }
+}
+
+.panel-gray  {
+    border-color: @gray-color;
+    
+    >.panel-heading {
+        background-color: @gray-color;
+        border-color: @gray-color;
+        color: #fff;
+    }
+    
+    &.no-bordered {
+        border: 0;   
+        
+        >.panel-heading {
+            border: 1px solid @gray-color;
+        }
+        
+        >.panel-body {
+            border: 1px solid transparent;
+            border-top-width: 0;
+        }
+    }
+    
+    .panel-toolbar > li > a {
+        color: @gray-muted-color;
+        
+        &:hover {
+            color: #fff;    
+        }
+    }
+}
+
+.panel-dark  {
+    border-color: @dark-color;
+    
+    >.panel-heading {
+        background-color: @dark-color;
+        border-color: @dark-color;
+        color: #fff;
+    }
+    
+    &.no-bordered {
+        border: 0;   
+        
+        >.panel-heading {
+            border: 1px solid @dark-color;
+        }
+        
+        >.panel-body {
+            border: 1px solid transparent;
+            border-top-width: 0;
+        }
+    }
+    
+    .panel-toolbar > li > a {
+        color: @dark-muted-color;
+        
+        &:hover {
+            color: #fff;    
+        }
+    }
+}
+
+.expand-widget  {
+    i   {
+        display: inline-block;    
+    }
+    
+    &.collapsed {
+        i   {
+            transform: rotateX(180deg);
+            -webkit-transform: rotateX(180deg);        
+        }    
+    }
+}
+
+.widget-fullscreen-mode    {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 1999;
+}
